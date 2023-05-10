@@ -262,6 +262,7 @@ body {
   }
   .hero__image {
     align-self: center;
+    width: 350px;
   }
   :root {
     --p-font: 0.5rem;
@@ -288,8 +289,24 @@ body {
     z-index: 10;
   }
 
+  .header__logo i {
+    font-size: 1.25rem;
+  }
+  .header__logo span {
+    font-size: 30px;
+  }
+
   .header__navlist.open {
     left: 0;
+  }
+  .hero__boxs {
+    grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+  }
+  .header__main-btn {
+    font-size: 0.8rem;
+  }
+  :root {
+    --big-font: clamp(2.3rem, 10vw, 3rem);
   }
 }
 
@@ -297,4 +314,18 @@ html.color {
   --text-color: #fff;
   --bg-color: #08162a;
   --second-color: #061a36;
+}
+
+@media (max-width: 290px) {
+  .hero__image {
+    width: 200px;
+  }
+  .header__main-btn {
+    font-size: 0.6rem;
+    padding: 5px 10px;
+  }
+
+  .header__logo span {
+    font-size: 1rem;
+  }
 }
